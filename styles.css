@@ -1,0 +1,204 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #ff4d6d;
+    --secondary-color: #ff8fa3;
+    --accent-color: #fff0f3;
+    --text-color: #590d22;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #fff0f3 0%, #ffccd5 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    40% { transform: scale(1); }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.animate-heartbeat {
+    animation: heartbeat 1.5s infinite;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+/* Next Button Styling */
+.next-btn-container {
+    margin-top: auto;
+    margin-bottom: 3rem;
+}
+
+.btn-romantic {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.btn-romantic:hover {
+    background-color: #ff2a4d;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 77, 109, 0.6);
+    color: var(--white);
+}
+
+.btn-romantic:active {
+    transform: translateY(-2px);
+}
+
+/* About/Message Page */
+.message-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.message-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.heart-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+/* Utilities */
+.text-gradient {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Memory Card Styling */
+.memory-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.memory-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 77, 109, 0.2);
+}
+
+.retro-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Teddy GIF Styling */
+.teddy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.teddy-gif {
+    max-width: 200px;
+    height: auto;
+    border: 3px solid var(--accent-color);
+}
+
+/* Reasons List */
+.reasons-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reasons-list li {
+    background: #fff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.reasons-list li:hover {
+    transform: scale(1.02);
+}
+
+.reasons-list li i {
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
